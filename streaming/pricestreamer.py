@@ -52,13 +52,14 @@ class PriceStreamer(threading.Thread):
         while True:
             
             for i in self.pairs_list:
+                time.sleep(2)
                 try:
-                    lasttickprice=self.mt5Api.symbol_info_tick(i)
-                    if lasttickprice is not None:
-                        print("currency:",i,lasttickprice._asdict())
-                        # lasttickprice = lasttickprice._asdict()
-                        new_price = Mt5LiveApiPrice(i,lasttickprice._asdict())
-                        print(new_price)
+                    # lasttickprice=self.mt5Api.symbol_info_tick(i)
+                    # if lasttickprice is not None:
+                    #     print("currency:",i,lasttickprice._asdict())
+                    #     # lasttickprice = lasttickprice._asdict()
+                    #     new_price = Mt5LiveApiPrice(i,lasttickprice._asdict())
+                    #     print(new_price)
                         # self.update_new_price(new_price)
                     # time.sleep(2)
                 # try:
@@ -73,7 +74,11 @@ class PriceStreamer(threading.Thread):
                 except Exception as error:
                     print(f"Error with currency {i} : {error}")
             if (timer()- start) > PriceStreamer.LOG_FREQ:
-                self.log_message(f"\n{pd.DataFrame.from_dict([v.get_dict() for _, v in self.shared_prices.items()])}",'main')
+                try:
+                    self.log_message(f"\n{pd.DataFrame.from_dict([v.get_dict() for _, v in self.shared_prices.items()])}",'main')
+                except Exception as error:
+                    print(self.shared_prices)
+                    print(f"Error with currency while logging {i} : {error}")
             time.sleep(15)
 
         # for price in resp.iter_lines():

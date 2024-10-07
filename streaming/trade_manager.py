@@ -2,6 +2,7 @@
 
 from models.trade_decision import TradeDecision
 from streaming.trade_risk_calculator import get_trade_units
+from constants import defs
 
 
 # def get_open_trades(api,pair):
@@ -32,18 +33,21 @@ def send_mt5_order(mt5Api,trade_decision,log_message):
             print("symbol_select({}}) failed",symbol)
             log_message(f"Could not place trade: symbol_select({symbol}) failed", "error")
     
-    lot = 0.03
+    lot = 0.01
     point = mt5Api.symbol_info(trade_decision.pair).point
     price = mt5Api.symbol_info_tick(trade_decision.pair).ask
+    if trade_decision.signal == defs.SELL:
+        type = mt5Api.ORDER_TYPE_SELL
+    else:
+        type = mt5Api.ORDER_TYPE_BUY
     deviation = 20
     request = {
         "action": mt5Api.TRADE_ACTION_DEAL,
         "symbol": trade_decision.pair,
         "volume": lot,
-        "type": mt5Api.ORDER_TYPE_BUY,
+        "type": type,
         "price": price,
-        "sl": price - 100 * point,
-        "tp": price + 100 * point,
+        
         "deviation": deviation,
         "magic": 234000,
         "comment": "python script open",
@@ -51,6 +55,9 @@ def send_mt5_order(mt5Api,trade_decision,log_message):
         
         "type_filling":mt5Api.ORDER_FILLING_FOK
     }
+    # "sl": price - 100 * point,
+    # "tp": price + 100 * point,
+
     # "type_filling": mt5Api.ORDER_FILLING_RETURN,
     # send a trading request
     result = mt5Api.order_send(request)

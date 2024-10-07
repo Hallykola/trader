@@ -4,6 +4,7 @@ import time
 from queue import Queue
 
 from api.oanda import OandaApi
+from constants import defs
 from infrastructure.logger import LogWrapper
 from models.tradesettings import TradeSettings
 from streaming.candleworker import CandleWorker
@@ -23,7 +24,7 @@ class Bot:
         self.logfiles= {}
         self.loadSettings()
         self.setUpLogging()
-        self.mt5Api = MetaTrader5(host='34.133.226.169',port=8001)
+        self.mt5Api = MetaTrader5(host=defs.server,port=8001)
         self.mt5Api.initialize()
         self.api = OandaApi()
 

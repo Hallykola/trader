@@ -7,7 +7,7 @@ import datetime
 import pytz
 
 
-mt5 = MetaTrader5(host='34.133.226.169',port=8001)
+mt5 = MetaTrader5(host='35.238.227.85',port=8001)
 mt5.initialize()
 
 print(mt5.version())

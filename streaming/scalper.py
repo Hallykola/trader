@@ -15,7 +15,7 @@ class ScalperWorker(threading.Thread):
         self.pair  = pair
         self.log_message = log_message
 
-    def monitor_profit(self, symbol,max_loss):
+    def monitor_profit(self, symbol,max_loss,min_gain):
         # Handle negative values ok..... TODO
         try:
             firstposition = self.mt5Api.positions_get(symbol=symbol)[0]
@@ -25,10 +25,10 @@ class ScalperWorker(threading.Thread):
             percent_loss = 0
             while True:
                 count = count + 1
-                time.sleep(2)
+                time.sleep(1)
                 position=self.mt5Api.positions_get(symbol=symbol)[0]
                 print(position)
-                #handle negative profit to wait while nnot less than bearable threashold
+                #handle negative profit to wait while not less than bearable threashold
                 if position.profit < 0: 
                     if position.profit  > max_loss:
                         continue
@@ -38,6 +38,8 @@ class ScalperWorker(threading.Thread):
                 if position.profit > max_profit:
                     max_profit = position.profit
                     loss = 0
+                elif position.profit < min_gain:
+                    continue
                 else:
                     loss = max_profit - position.profit
                     percent_loss = ((abs(loss)/max_profit)*100)
@@ -52,10 +54,12 @@ class ScalperWorker(threading.Thread):
 
     def run(self):
         while True:
-            self.log_message(f"ScalperWorker : ", 'main')
-            self.log_message(f"ScalperWorker : ", self.pair)
+            pass
+            # self.log_message(f"ScalperWorker : ", 'main')
+            # self.log_message(f"ScalperWorker : ", self.pair)
             # print("Scalper Worker: Hello")
-            self.monitor_profit(self.pair, -1.5)
+            #paused scalperworker
+            self.monitor_profit(self.pair, -1.9,0.10)
             
         
            

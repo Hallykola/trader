@@ -69,16 +69,16 @@ class CandleWorker(threading.Thread):
         rates_frame['mid_l']=rates_frame['low']
         rates_frame['mid_c']=rates_frame['close']
         rates_frame['mid_o']=rates_frame['open']
-        rates_frame['ask_h']=rates_frame['high']+ rates_frame['spread']*0.0001
-        rates_frame['ask_l']=rates_frame['low']+ rates_frame['spread']*0.0001
-        rates_frame['ask_c']=rates_frame['close']+ rates_frame['spread']*0.0001
-        rates_frame['ask_o']=rates_frame['open']+ rates_frame['spread']*0.0001
-        rates_frame['bid_h']=rates_frame['high']- rates_frame['spread']*0.0001
-        rates_frame['bid_l']=rates_frame['low']- rates_frame['spread']*0.0001
-        rates_frame['bid_c']=rates_frame['close']- rates_frame['spread']*0.0001
-        rates_frame['bid_o']=rates_frame['open']- rates_frame['spread']*0.0001
+        rates_frame['ask_h']=rates_frame['high']+ rates_frame['spread']*self.trade_settings.pip
+        rates_frame['ask_l']=rates_frame['low']+ rates_frame['spread']*self.trade_settings.pip
+        rates_frame['ask_c']=rates_frame['close']+ rates_frame['spread']*self.trade_settings.pip
+        rates_frame['ask_o']=rates_frame['open']+ rates_frame['spread']*self.trade_settings.pip
+        rates_frame['bid_h']=rates_frame['high']- rates_frame['spread']*self.trade_settings.pip
+        rates_frame['bid_l']=rates_frame['low']- rates_frame['spread']*self.trade_settings.pip
+        rates_frame['bid_c']=rates_frame['close']- rates_frame['spread']*self.trade_settings.pip
+        rates_frame['bid_o']=rates_frame['open']- rates_frame['spread']*self.trade_settings.pip
         print("I just got my past data for analysis")
-        # print(rates_frame)
+        # print(rates_frame.tail())
         self.log_message(rates_frame,pair)
         return rates_frame
 
@@ -112,8 +112,8 @@ class CandleWorker(threading.Thread):
         try:
             while attempts < tries:
                 # candles_df = self.api.get_candles_df(self.pair,granularity=self.granularity,count=50)
-                print("See o",self.pair,self.granularity,50)
-                candles_df = self.getCandlesDf(self.pair,self.granularity,50)
+                print("See o",self.pair,self.granularity,220)
+                candles_df = self.getCandlesDf(self.pair,self.granularity,220)
                 
                 if candles_df.shape[0] == 0:
                     self.log_message('No candles',"error")
