@@ -63,7 +63,7 @@ def process_candles(df: pd.DataFrame, pair, trade_settings: TradeSettings, log_m
     df_an["SPREAD"] = df_an["spread"]*trade_settings.pip #df_an.ask_c -df_an.bid_c
     # print( df_an["SPREAD"])
     df_an = BollingerBands(df_an,trade_settings.n_ma,trade_settings.n_std)
-    df_an["GAIN"] =    (df_an.mid_c - df_an.BB_MA)*0.6   #*0.56 #df_an.mid_c - df_an.BB_MA
+    df_an["GAIN"] =    abs(df_an.mid_c - df_an.BB_MA)*2  #*0.6   #*0.56 #df_an.mid_c - df_an.BB_MA
     df_an['SIGNAL'] = df_an.apply(apply_signal, axis=1,  args=(trade_settings,))
     df_an["SL"] = df_an.apply(apply_SL, axis=1, args=(trade_settings,))
     df_an["TP"] = df_an.apply(apply_TP,axis=1)
@@ -72,6 +72,9 @@ def process_candles(df: pd.DataFrame, pair, trade_settings: TradeSettings, log_m
     log_cols = ['PAIR', 'time', 'mid_c', 'mid_o','BB_UP' ,'BB_MA','BB_LW','SL', 'TP', 'SPREAD', 'GAIN', 'LOSS', 'SIGNAL']
 
     # log_cols = ['PAIR', 'time', 'mid_c', 'mid_o', 'SL', 'TP', 'SPREAD', 'GAIN', 'LOSS', 'SIGNAL']
+    lastrow = df_an.iloc[-1]
+    print(f"Current spread: {lastrow.SPREAD} with settings spread: {trade_settings.maxspread} and current est. gain is: {lastrow.GAIN} with settings mingain as: {trade_settings.mingain}")
     log_message(f"process_candles:\n{df_an[log_cols].tail()}", pair)
+    log_message(f"{pair} --> Current spread: {lastrow.SPREAD} with settings spread: {trade_settings.maxspread} and current est. gain is: {lastrow.GAIN} with settings mingain as: {trade_settings.mingain}","main")
 
     return df_an[log_cols].iloc[-1]

@@ -1,74 +1,59 @@
-2024-10-04 *** 16:00:06 LogWrapper init() ./logs/main.log
-2024-10-04 *** 16:00:06 Done setting up logs
-2024-10-04 *** 16:01:35 
-  instrument                    time        ask        bid
-0     EURUSD 2024-10-04 18:00:11.724    1.09700    1.09688
-1     GBPJPY 2024-10-04 18:00:22.411  194.72900  194.70600
-2     EURJPY 2024-10-04 18:00:29.675  162.88500  162.86300
-3     USDJPY 2024-10-04 18:00:36.876  148.49000  148.46800
-4     GBPUSD 2024-10-04 18:00:45.291    1.31139    1.31125
-5     EURGBP 2024-10-04 18:00:53.612    0.83661    0.83650
-6     EURCHF 2024-10-04 18:01:01.163    0.94195    0.94181
-7     GBPCHF 2024-10-04 18:01:10.988    1.12593    1.12575
-8     USDCAD 2024-10-04 18:01:19.691    1.35763    1.35749
-9     AUDUSD 2024-10-04 18:01:28.523    0.68027    0.68011
-2024-10-04 *** 16:03:10 
-  instrument                    time        ask        bid
-0     EURUSD 2024-10-04 18:01:51.628    1.09723    1.09712
-1     GBPJPY 2024-10-04 18:02:00.779  194.74100  194.71700
-2     EURJPY 2024-10-04 18:02:09.226  162.91900  162.90200
-3     USDJPY 2024-10-04 18:02:16.504  148.48600  148.46400
-4     GBPUSD 2024-10-04 18:02:23.723    1.31135    1.31121
-5     EURGBP 2024-10-04 18:02:31.371    0.83674    0.83662
-6     EURCHF 2024-10-04 18:02:39.792    0.94217    0.94200
-7     GBPCHF 2024-10-04 18:02:47.247    1.12610    1.12589
-8     USDCAD 2024-10-04 18:02:57.006    1.35743    1.35727
-9     AUDUSD 2024-10-04 18:03:05.839    0.68027    0.68009
-2024-10-04 *** 16:04:42 
-  instrument                    time        ask        bid
-0     EURUSD 2024-10-04 18:03:25.007    1.09718    1.09707
-1     GBPJPY 2024-10-04 18:03:37.103  194.69400  194.66600
-2     EURJPY 2024-10-04 18:03:44.687  162.91400  162.89400
-3     USDJPY 2024-10-04 18:03:51.665  148.48200  148.46100
-4     GBPUSD 2024-10-04 18:03:57.691    1.31134    1.31119
-5     EURGBP 2024-10-04 18:04:05.531    0.83685    0.83673
-6     EURCHF 2024-10-04 18:04:12.411    0.94209    0.94195
-7     GBPCHF 2024-10-04 18:04:19.835    1.12584    1.12566
-8     USDCAD 2024-10-04 18:04:27.067    1.35766    1.35752
-9     AUDUSD 2024-10-04 18:04:35.003    0.68011    0.67995
-2024-10-04 *** 16:06:14 
-  instrument                    time        ask        bid
-0     EURUSD 2024-10-04 18:05:00.443    1.09728    1.09716
-1     GBPJPY 2024-10-04 18:05:07.260  194.72900  194.70300
-2     EURJPY 2024-10-04 18:05:17.307  162.93700  162.91800
-3     USDJPY 2024-10-04 18:05:23.675  148.52000  148.49800
-4     GBPUSD 2024-10-04 18:05:31.515    1.31137    1.31124
-5     EURGBP 2024-10-04 18:05:39.131    0.83677    0.83664
-6     EURCHF 2024-10-04 18:05:45.371    0.94253    0.94237
-7     GBPCHF 2024-10-04 18:05:53.946    1.12646    1.12630
-8     USDCAD 2024-10-04 18:06:01.115    1.35750    1.35735
-9     AUDUSD 2024-10-04 18:06:07.354    0.68041    0.68024
-2024-10-04 *** 16:07:57 
-  instrument                    time        ask        bid
-0     EURUSD 2024-10-04 18:06:31.546    1.09722    1.09709
-1     GBPJPY 2024-10-04 18:06:39.003  194.74100  194.71900
-2     EURJPY 2024-10-04 18:06:47.515  162.94000  162.92100
-3     USDJPY 2024-10-04 18:06:53.851  148.50800  148.48900
-4     GBPUSD 2024-10-04 18:07:01.564    1.31142    1.31128
-5     EURGBP 2024-10-04 18:07:10.043    0.83668    0.83658
-6     EURCHF 2024-10-04 18:07:21.883    0.94242    0.94227
-7     GBPCHF 2024-10-04 18:07:31.002    1.12641    1.12625
-8     USDCAD 2024-10-04 18:07:42.235    1.35770    1.35753
-9     AUDUSD 2024-10-04 18:07:47.897    0.68032    0.68015
-2024-10-04 *** 16:09:39 
-  instrument                    time        ask        bid
-0     EURUSD 2024-10-04 18:08:15.002    1.09713    1.09700
-1     GBPJPY 2024-10-04 18:08:25.370  194.63200  194.60700
-2     EURJPY 2024-10-04 18:08:34.010  162.87000  162.84900
-3     USDJPY 2024-10-04 18:08:41.146  148.49600  148.47400
-4     GBPUSD 2024-10-04 18:08:53.852    1.31091    1.31080
-5     EURGBP 2024-10-04 18:08:59.162    0.83684    0.83672
-6     EURCHF 2024-10-04 18:09:07.098    0.94241    0.94226
-7     GBPCHF 2024-10-04 18:09:13.051    1.12624    1.12605
-8     USDCAD 2024-10-04 18:09:20.858    1.35796    1.35779
-9     AUDUSD 2024-10-04 18:09:33.178    0.67997    0.67979
+2024-10-09 *** 09:17:00 LogWrapper init() ./logs/main.log
+2024-10-09 *** 09:17:00 Done setting up logs
+2024-10-09 *** 09:17:14 EURJPY ticket id:690191606 is now being monitored
+2024-10-09 *** 09:17:14 EURGBP ticket id:690177992 is now being monitored
+2024-10-09 *** 09:17:30 EURCHF ticket id:690185427 is now being monitored
+2024-10-09 *** 09:17:31 CADCHF ticket id:690186243 is now being monitored
+2024-10-09 *** 09:17:32 GBPCHF ticket id:690184082 is now being monitored
+2024-10-09 *** 09:17:34 EURUSD --> Current spread: 0.0011 with settings spread: 0.0015 and current est. gain is: 0.00040400000000007097 with settings mingain as: 0.0006
+2024-10-09 *** 09:17:35 USDCAD ticket id:690170356 is now being monitored
+2024-10-09 *** 09:17:35 GBPUSD ticket id:690189120 is now being monitored
+2024-10-09 *** 09:17:44 CADCHF ticket id:690186298 is now being monitored
+2024-10-09 *** 09:17:44 GBPCHF ticket id:690184500 is now being monitored
+2024-10-09 *** 09:17:44 GBPJPY --> Current spread: 0.23 with settings spread: 0.14 and current est. gain is: 0.34646666666662895 with settings mingain as: 0.06
+2024-10-09 *** 09:17:47 GBPUSD ticket id:690189299 is now being monitored
+2024-10-09 *** 09:17:55 EURJPY --> Current spread: 0.12 with settings spread: 0.14 and current est. gain is: 0.13106666666669753 with settings mingain as: 0.06
+2024-10-09 *** 09:17:55 TradeWorker : TradeDecision():0 EURJPY dir:1 gain:0.1311 loss:0.0131 sl:162.8329  tp:162.9771
+2024-10-09 *** 09:17:58 CADCHF ticket id:690186403 is now being monitored
+2024-10-09 *** 09:18:00 GBPCHF ticket id:690191505 is now being monitored
+2024-10-09 *** 09:18:00 GBPUSD ticket id:690189456 is now being monitored
+2024-10-09 *** 09:18:05 USDJPY --> Current spread: 0.18 with settings spread: 0.14 and current est. gain is: 0.06053333333335331 with settings mingain as: 0.06
+2024-10-09 *** 09:18:09 GBPCHF ticket id:690191567 is now being monitored
+2024-10-09 *** 09:18:24 GBPUSD --> Current spread: 0.0009000000000000001 with settings spread: 0.0015 and current est. gain is: 0.0018486666666670537 with settings mingain as: 0.0006
+2024-10-09 *** 09:18:24 TradeWorker : TradeDecision():0 GBPUSD dir:-1 gain:0.0018 loss:0.0002 sl:1.3090  tp:1.3070
+2024-10-09 *** 09:18:25 GBPCHF ticket id:690191674 is now being monitored
+2024-10-09 *** 09:18:30 EURGBP --> Current spread: 0.0008 with settings spread: 0.0015 and current est. gain is: 0.0008300000000001084 with settings mingain as: 0.0006
+2024-10-09 *** 09:18:38 TradeWorker : TradeDecision():0 EURGBP dir:1 gain:0.0008 loss:0.0001 sl:0.8375  tp:0.8384
+2024-10-09 *** 09:18:40 EURCHF --> Current spread: 0.0012000000000000001 with settings spread: 0.0015 and current est. gain is: 0.00031733333333350267 with settings mingain as: 0.0006
+2024-10-09 *** 09:18:42 GBPUSD ticket id:690193558 is now being monitored
+2024-10-09 *** 09:18:48 GBPCHF --> Current spread: 0.0012000000000000001 with settings spread: 0.0015 and current est. gain is: 0.00076733333333312 with settings mingain as: 0.0006
+2024-10-09 *** 09:18:48 TradeWorker : TradeDecision():0 GBPCHF dir:-1 gain:0.0008 loss:0.0001 sl:1.1213  tp:1.1205
+2024-10-09 *** 09:18:55 EURGBP ticket id:690193629 is now being monitored
+2024-10-09 *** 09:19:04 GBPUSD ticket id:690193613 is now being monitored
+2024-10-09 *** 09:19:05 USDCAD --> Current spread: 0.0013000000000000002 with settings spread: 0.0015 and current est. gain is: 0.000496000000000052 with settings mingain as: 0.0006
+2024-10-09 *** 09:19:14 AUDUSD --> Current spread: 0.0016 with settings spread: 0.0015 and current est. gain is: 0.0002366666666666628 with settings mingain as: 0.0006
+2024-10-09 *** 09:19:21 GBPUSD ticket id:690193664 is now being monitored
+2024-10-09 *** 09:19:22 AUDCAD --> Current spread: 0.0016 with settings spread: 0.0015 and current est. gain is: 0.0006626666666667003 with settings mingain as: 0.0006
+2024-10-09 *** 09:19:27 
+   instrument                    time        ask        bid
+0      EURUSD 2024-10-09 11:17:08.123    1.09628    1.09615
+1      GBPJPY 2024-10-09 11:17:18.395  194.31800  194.29200
+2      EURJPY 2024-10-09 11:17:40.059  162.78500  162.77100
+3      USDJPY 2024-10-09 11:17:52.859  148.51400  148.49400
+4      GBPUSD 2024-10-09 11:18:04.315    1.30830    1.30813
+5      EURGBP 2024-10-09 11:18:16.762    0.83802    0.83790
+6      EURCHF 2024-10-09 11:18:28.410    0.93927    0.93911
+7      GBPCHF 2024-10-09 11:18:40.890    1.12089    1.12072
+8      USDCAD 2024-10-09 11:18:47.002    1.36729    1.36713
+9      AUDUSD 2024-10-09 11:19:01.628    0.67300    0.67282
+10     AUDCAD 2024-10-09 11:19:13.436    0.92005    0.91986
+11     CADCHF 2024-10-09 11:19:20.987    0.62685    0.62671
+2024-10-09 *** 09:19:31 CADCHF --> Current spread: 0.0012000000000000001 with settings spread: 0.0015 and current est. gain is: 0.0006586666666668073 with settings mingain as: 0.0006
+2024-10-09 *** 09:19:31 TradeWorker : TradeDecision():0 CADCHF dir:-1 gain:0.0007 loss:0.0001 sl:0.6268  tp:0.6260
+2024-10-09 *** 09:19:50 GBPUSD ticket id:690193904 is now being monitored
+2024-10-09 *** 09:20:17 GBPUSD ticket id:690194013 is now being monitored
+2024-10-09 *** 09:20:23 EURUSD --> Current spread: 0.0011 with settings spread: 0.0015 and current est. gain is: 0.00015933333333340016 with settings mingain as: 0.0006
+2024-10-09 *** 09:20:28 GBPUSD ticket id:690194284 is now being monitored
+2024-10-09 *** 09:20:29 GBPJPY --> Current spread: 0.24 with settings spread: 0.14 and current est. gain is: 0.01046666666661622 with settings mingain as: 0.06
+2024-10-09 *** 09:20:37 EURJPY --> Current spread: 0.13 with settings spread: 0.14 and current est. gain is: 0.059733333333326755 with settings mingain as: 0.06
+2024-10-09 *** 09:20:46 USDJPY --> Current spread: 0.17 with settings spread: 0.14 and current est. gain is: 0.03246666666666442 with settings mingain as: 0.06

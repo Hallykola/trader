@@ -6,7 +6,9 @@ SECURE_HEADER ={
             "Content-Type":"application/json"
         }
 
-server = 'localhost'
+server = "34.122.125.82" #'35.222.245.78'
 BUY = 1
 SELL = -1
 NONE = 0
+
+report_loss_threashold = -0.46

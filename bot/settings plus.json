@@ -1,18 +1,18 @@
 {
     "trade_risk": 5,
-    "granularity": "M5",
+    "granularity": "M1",
     "trading_pairs": {
-        "EURUSD": {
+        "EURUSD+": {
             "n_ma": 10,
             "n_std": 2.0,
-            "maxspread": 0.0015,
+            "maxspread": 0.0014,
             "mingain": 0.0006,
             "riskreward": 1.5,
             "defaultgain": 0.004,
             "pip": 0.0001,
             "defaultloss": 0.004
         },
-        "GBPJPY": {
+        "GBPJPY+": {
             "n_ma": 10,
             "n_std": 2.0,
             "maxspread": 0.14,
@@ -22,7 +22,7 @@
             "pip": 0.01,
             "defaultloss": 0.4
         },
-        "EURJPY": {
+        "EURJPY+": {
             "n_ma": 10,
             "n_std": 2.0,
             "maxspread": 0.14,
@@ -32,7 +32,7 @@
             "pip": 0.01,
             "defaultloss": 0.4
         },
-        "USDJPY": {
+        "USDJPY+": {
             "n_ma": 10,
             "n_std": 2.0,
             "maxspread": 0.14,
@@ -42,79 +42,70 @@
             "pip": 0.01,
             "defaultloss": 0.4
         },
-        "GBPUSD": {
+        "GBPUSD+": {
             "n_ma": 10,
             "n_std": 2.0,
-            "maxspread": 0.0015,
+            "maxspread": 0.0014,
             "mingain": 0.0006,
             "riskreward": 1.5,
             "defaultgain": 0.0004,
             "pip": 0.0001,
             "defaultloss": 0.0004
         },
-        "EURGBP": {
+        "EURGBP+": {
             "n_ma": 10,
             "n_std": 2.0,
-            "maxspread": 0.0015,
+            "maxspread": 0.0014,
             "mingain": 0.0006,
             "riskreward": 1.5,
             "pip": 0.0001,
             "defaultgain": 0.0004,
             "defaultloss": 0.0004
         },
-        "EURCHF": {
+        "EURCHF+": {
             "n_ma": 10,
             "n_std": 2.0,
-            "maxspread": 0.0015,
+            "maxspread": 0.0014,
             "pip": 0.0001,
             "mingain": 0.0006,
             "riskreward": 1.5,
             "defaultgain": 0.0004,
             "defaultloss": 0.0004
         },
-         "GBPCHF": {
+         "GBPCHF+": {
             "n_ma": 10,
             "n_std": 2.0,
-            "maxspread": 0.0015,
+            "maxspread": 0.0014,
             "mingain": 0.0006,
             "riskreward": 1.5,
             "defaultgain": 0.0004,
             "pip": 0.0001,
             "defaultloss": 0.0004
         },
-        "USDCAD": {
+        "USDCAD+": {
             "n_ma": 10,
             "n_std": 2.0,
-            "maxspread": 0.0015,
+            "maxspread": 0.0014,
             "mingain": 0.0006,
             "riskreward": 1.5,
             "defaultgain": 0.0004,
             "pip": 0.0001,
             "defaultloss": 0.0004
         },
-        "AUDUSD": {
+        "AUDUSD+": {
             "n_ma": 10,
             "n_std": 2.0,
-            "maxspread": 0.0015,
-            "mingain": 0.0006,
-            "riskreward": 1.5,
-            "pip": 0.0001,
-            "defaultgain": 0.0004,
-            "defaultloss": 0.0004
-        },"AUDCAD": {
-            "n_ma": 10,
-            "n_std": 2.0,
-            "maxspread": 0.0015,
+            "maxspread": 0.0014,
             "mingain": 0.0006,
             "riskreward": 1.5,
             "pip": 0.0001,
             "defaultgain": 0.0004,
             "defaultloss": 0.0004
         } ,
-        "CADCHF": {
+        "AUDCAD+": {
             "n_ma": 10,
             "n_std": 2.0,
-            "maxspread": 0.0015,
+            "maxspread": 0.0014,
             "mingain": 0.0006,
             "riskreward": 1.5,
             "pip": 0.0001,

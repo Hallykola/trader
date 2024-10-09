@@ -58,7 +58,7 @@ def send_mt5_order(mt5Api,trade_decision,log_message):
     # "sl": price - 100 * point,
     # "tp": price + 100 * point,
 
-    # "type_filling": mt5Api.ORDER_FILLING_RETURN,
+    # "type_filling": mt5Api.ORDER_FILLING_RETURN, FOK
     # send a trading request
     result = mt5Api.order_send(request)
     # check the execution result
@@ -90,6 +90,8 @@ def place_trade(mt5Api,trade_decision:TradeDecision,trade_risk,log_message):
     #                         trade_decision.loss, trade_risk, log_message)
 
     send_mt5_order(mt5Api,trade_decision,log_message)
+
+
     # ok,response = mt5Api.place_trade(
     #     trade_decision.pair, 
     #     trade_units,

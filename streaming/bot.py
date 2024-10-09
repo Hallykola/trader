@@ -7,6 +7,7 @@ from api.oanda import OandaApi
 from constants import defs
 from infrastructure.logger import LogWrapper
 from models.tradesettings import TradeSettings
+from streaming.avenger import AvengerWorker
 from streaming.candleworker import CandleWorker
 from streaming.priceprocessor import PriceProcessor
 from streaming.pricestreamer import PriceStreamer
@@ -59,7 +60,10 @@ class Bot:
         shared_prices  ={}
         shared_prices_event={}
         shared_prices_lock= threading.Lock()
-        scalper = {}
+        # scalper = {}
+        monitored_postions = {}
+
+        offenders_work_queue = Queue()
         
         candle_queue = Queue()
         trade_work_queue = Queue()
@@ -95,12 +99,22 @@ class Bot:
         threads.append(trade_worker_thread)
         trade_worker_thread.start()
 
-        
         for pair in self.tradeSettings.keys():
-            scalper_thread =  ScalperWorker(self.mt5Api,pair,self.log_message)
-            scalper_thread.daemon=True
+            scalper_thread = ScalperWorker(self.mt5Api,pair,monitored_postions,offenders_work_queue, threads,self.log_message)
+            scalper_thread.daemon = True
             threads.append(scalper_thread)
             scalper_thread.start()
+
+        # for pair in self.tradeSettings.keys():
+        #     scalper_thread =  ScalperWorker(self.mt5Api,pair,monitored_postions, self.log_message)
+        #     scalper_thread.daemon=True
+        #     threads.append(scalper_thread)
+        #     scalper_thread.start()
+        
+        avenger_worker_thread = AvengerWorker(self.mt5Api,offenders_work_queue,self.log_message)
+        avenger_worker_thread.daemon = True
+        threads.append(avenger_worker_thread)
+        avenger_worker_thread.start()
 
 
         try:
